@@ -16,7 +16,7 @@ export class SplashPage  {
   ionViewDidEnter()
   {
     setTimeout(() => {
-      this.router.navigate(['home']);
+      this.router.navigate(['login']);
     }, 3000);
   }
 

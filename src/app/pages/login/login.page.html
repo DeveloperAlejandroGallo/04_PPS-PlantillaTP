@@ -1,9 +1,40 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
+<ion-header [translucent]="true">
+    <ion-toolbar>
+        <ion-buttons slot="secondary">
+            <ion-button>
+                <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+            </ion-button>
+            <ion-button>
+                <ion-icon slot="icon-only" name="search"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-button color="secondary">
+                <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
-</ion-content>
+<body>
+    <div class="img-login container ion-text-center" id="container">
+        <ion-item class="ion-align-items-center">
+            <ion-label>Correo: </ion-label>
+            <ion-input type="text" placeholder="Ingrese Correo" [(ngModel)]="correo"></ion-input>
+        </ion-item>
+        <ion-item class="ion-align-items-center">
+            <ion-label>Clave: </ion-label>
+            <ion-input type="password" placeholder="Ingrese Clave" [(ngModel)]="clave" (keydown.enter)="save($event)"></ion-input>
+        </ion-item>
+        <ion-item-divider class="ion-align-items-center">
+            <ion-button class="btn-block" (click)="validarCorreoClave()" shape="round" size="medium">Ingresar</ion-button>
+        </ion-item-divider>
+        <ion-item-divider class="ion-align-items-center">
+            <ion-button class="btn-block" (click)="register()" shape="round" size="medium">Registrar</ion-button>
+        </ion-item-divider>
+        <ion-item>
+            <ion-label>{{mensaje}}</ion-label>
+        </ion-item>
+    </div>
+</body>
