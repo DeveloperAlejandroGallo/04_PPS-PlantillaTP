@@ -18,22 +18,22 @@
 </ion-header>
 
 <body>
-    <div class="img-login container ion-text-center" id="container">
+    <div class="img-login container ion-text-center transparente" id="container">
         <ion-item class="ion-align-items-center">
             <ion-label>Correo: </ion-label>
             <ion-input type="text" placeholder="Ingrese Correo" [(ngModel)]="correo"></ion-input>
         </ion-item>
-        <ion-item class="ion-align-items-center">
+        <ion-item class="ion-align-items-center transparente">
             <ion-label>Clave: </ion-label>
             <ion-input type="password" placeholder="Ingrese Clave" [(ngModel)]="clave" (keydown.enter)="save($event)"></ion-input>
         </ion-item>
-        <ion-item-divider class="ion-align-items-center">
-            <ion-button class="btn-block" (click)="validarCorreoClave()" shape="round" size="medium">Ingresar</ion-button>
+        <ion-item-divider class="ion-align-items-center transparente ">
+            <ion-button class="button bluebutton" (click)="validarCorreoClave()" shape="round" size="medium">Ingresar</ion-button>
         </ion-item-divider>
-        <ion-item-divider class="ion-align-items-center">
-            <ion-button class="btn-block" (click)="register()" shape="round" size="medium">Registrar</ion-button>
+        <ion-item-divider class="ion-align-items-center transparente ">
+            <ion-button class="button bluebutton" (click)="register()" shape="round" size="medium">Registrar</ion-button>
         </ion-item-divider>
-        <ion-item>
+        <ion-item class="transparente">
             <ion-label>{{mensaje}}</ion-label>
         </ion-item>
     </div>

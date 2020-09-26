@@ -26,3 +26,26 @@ body {
 #container a {
     text-decoration: none;
 }
+
+.button {
+    flex: auto;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+    margin-right: 10px;
+    color: #363131;
+    font-weight: bolder;
+}
+
+.button:hover {
+    background-color: #388bac;
+    /* Green */
+    color: white;
+}
+
+.transparente {
+    background-color: rgba(172, 88, 88, 0.3);
+}
+
+.bluebutton {
+    background: #1a73e8;
+}
