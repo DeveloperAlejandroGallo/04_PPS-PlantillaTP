@@ -23,6 +23,29 @@ export class LoginPage implements OnInit
 
   ngOnInit() {}
 
+
+
+  loguear(user: string)
+  {
+    switch (user)
+    {
+      case 'admin':
+           {
+        this.correo = 'admin@admin.com';
+        this.clave = '123456';
+        break;
+      }
+      case 'generico':
+           {
+        this.correo = 'generico@generico.com';
+        this.clave = '123456';
+        break;
+      }
+    }
+    this.validarCorreoClave();
+
+  }
+
   public register(): void {
     this.createUserFireBase(this.correo, this.clave);
   }
@@ -46,6 +69,9 @@ export class LoginPage implements OnInit
               break;
             case 'auth/wrong-password':
               this.mensaje = 'Clave incorrecta';
+              break;
+            case 'auth/user-not-found':
+              this.mensaje = 'El usuario no existe.';
               break;
               default:
                 this.mensaje = error.message;
