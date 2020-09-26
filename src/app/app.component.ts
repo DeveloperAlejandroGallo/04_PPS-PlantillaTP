@@ -21,7 +21,16 @@ export class AppComponent {
   initializeApp() {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
+      this.statusBar.overlaysWebView(false);
       this.splashScreen.hide();
+    });
+  }
+  // Evita la vuelta atrás.
+  private setAndroidBackButtonBehavior(): void {
+    this.platform.backButton.subscribe(() => {
+      if (window.location.pathname === '/login') {
+        navigator['app'].exitApp();
+      }
     });
   }
 }
