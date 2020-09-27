@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class BienvenidoPage implements OnInit {
 
   constructor() { }
-
+  title = 'Primera Pagina';
   ngOnInit() {
   }
 
