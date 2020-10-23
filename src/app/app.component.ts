@@ -19,6 +19,7 @@ export class AppComponent {
     private splashScreen: SplashScreen,
     private statusBar: StatusBar
   ) {
+    this.setAndroidBackButtonBehavior(); // inicializa el observable
     this.initializeApp();
   }
 
@@ -27,7 +28,6 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.statusBar.overlaysWebView(false);
       this.splashScreen.hide();
-      this.setAndroidBackButtonBehavior();
     });
   }
   // Evita la vuelta atrás.
