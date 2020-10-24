@@ -30,16 +30,30 @@ export class LoginPage implements OnInit {
     switch (user) {
       case 'admin': {
         this.correo = 'admin@admin.com';
-        this.clave = '123456';
+        this.clave = '111111';
         break;
       }
-      case 'generico': {
-        this.correo = 'generico@generico.com';
-        this.clave = '123456';
+      case 'invitado': {
+        this.correo='invitado@invitado.com';
+        this.clave='222222';
+        break;
+      }
+      case 'usuario': {
+        this.correo='usuario@usuario.com';
+        this.clave='333333';
+        break;
+      }
+      case 'anonimo': {
+        this.correo='anonimo@anonimo.com';
+        this.clave='444444';
+        break;
+      }
+      case 'tester': {
+        this.correo='tester@tester.com';
+        this.clave='555555';
         break;
       }
     }
-    this.validarCorreoClave();
   }
 
   public register(): void {

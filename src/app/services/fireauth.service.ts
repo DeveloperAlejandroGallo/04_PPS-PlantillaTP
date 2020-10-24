@@ -16,4 +16,11 @@ export class FireauthService {
   register(email: string, password: string) {
     return this.auth.createUserWithEmailAndPassword(email, password);
   }
+  public currentUser(){
+    return this.auth.currentUser;
+  }
+
+  logout() {
+    return this.auth.signOut();
+  }
 }
